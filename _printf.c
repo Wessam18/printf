@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 			}
 			i++;
 		}
-		va_end(vlist);
-		return (len);
 	}
+	va_end(vlist);
+	return (len);
 }
