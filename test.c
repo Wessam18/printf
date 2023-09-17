@@ -17,7 +17,7 @@ int main(void)
        printf("%d\n", len);
   
        len = printf("%c", 'A');
-       printf("%d\n", 'A');
+       printf("%d\n", len);
 
 /**
  * @brief 
