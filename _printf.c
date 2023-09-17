@@ -1,6 +1,6 @@
 #include "main.h"
 
-int main(void)
+int _printf(const char, ...)
 {
-       
+       v
 }
