@@ -17,6 +17,7 @@ int main(void)
         (void) len2;
         (void) ui;
         (void) addr;
+       
         len = _printf("Character:[%c]\n", 'H');
         printf("%d\n", len);
         len = printf("Character:[%c]\n", 'H');
@@ -24,14 +25,17 @@ int main(void)
 
         len = _printf("%s\n", NULL);
         printf("%d\n", len);
-
         len = printf("%s\n", NULL);
         printf("%d\n", len);
         
         len = _printf("Let's try to printf a simple sentence.\n");
         printf("%d\n", len);
-        
         len = printf("Let's try to printf a simple sentence.\n");
+        printf("%d\n", len);
+
+        len = _printf("%%");
+        printf("%d\n", len);
+        len = printf("%%");
         printf("%d\n", len);
 
 
@@ -58,6 +62,7 @@ int main(void)
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n");
-    printf("Unknown:[%r]\n");
-    return (0);*/
+    printf("Unknown:[%r]\n");*/
+
+    return (0);
 }

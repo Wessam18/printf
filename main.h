@@ -10,14 +10,14 @@
 
 /***********Struct_Declarations**********/
 /**
- * pformt: Structure name.
+ * struct pformat - structure name for used to get symbols and its functions.
  * @symbol: Input symbol
- * print - function pointer
+ * @print: function pointer
  */
 typedef struct pformat
 {
-    char symbol;
-    int (*print)(va_list varg);
+char symbol;
+int (*print)(va_list varg);
 } prtmt;
 
 /*******Function_Declarations************/
