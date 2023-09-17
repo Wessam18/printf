@@ -13,8 +13,8 @@ int _printf(const char *format, ...)
 
 	prtmt format_functions[] = {
 		{'c', print_char},
-		/*{'s', print_str},*/
-		/*{'%', print_modular},*/
+		{'s', print_str},
+		{'%', print_modular},
 	};
 
 	/*checking validation of format*/
@@ -42,8 +42,15 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-			i++;
+
+			if (j >= 3)
+			{
+				i--;
+				fputc(format[i], stdout);
+				len++;
+			}
 		}
+		i++;
 	}
 	va_end(vlist);
 	return (len);
