@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			_putchar(format[i], stdout);
+			_putchar(format[i]);
 			len++;
 		} else
 		{
@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 			if (j >= 3)
 			{
 				i--;
-				_putchar(format[i], stdout);
+				_putchar(format[i]);
 				len++;
 			} }
 		i++;
