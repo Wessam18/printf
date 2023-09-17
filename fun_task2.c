@@ -15,6 +15,11 @@ int print_int(va_list varg)
 		number *= (-1);
 		len++;
 	}
+       else if (number == 0)
+       {
+              _putchar('0');
+              return (0);
+       }
 	len += int_recur(number);
 	return (len);
 }
@@ -27,6 +32,10 @@ int int_recur(int value)
 {
 	int len;
 
+       if (value == 0)
+       {
+              return (0);
+       }
 	len = (1 + int_recur(value / 10));
 	_putchar((value % 10) + '0');
 	return (len);
