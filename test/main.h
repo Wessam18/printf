@@ -25,7 +25,7 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int print_char(va_list varg);
 int print_str(va_list varg);
-int print_modular(va_list varg);
+int print_mod(va_list varg);
 int print_int(va_list varg);
 int int_recur(int value);
 #endif /*MAIN_H*/
