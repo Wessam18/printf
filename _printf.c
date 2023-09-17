@@ -13,8 +13,8 @@ int _printf(const char *format, ...)
 
 	prtmt format_functions[] = {
 		{'c', print_char},
-		{'s', print_str},
-		{'%', print_modular},
+		/*{'s', print_str},*/
+		/*{'%', print_modular},*/
 	};
 
 	/*checking validation of format*/
