@@ -8,6 +8,7 @@
 int print_int(va_list varg)
 {
 	int number = va_arg(varg, int), len = 0;
+       unsigned int negative = number;
 
 	if (number < 0)
 	{
@@ -20,7 +21,7 @@ int print_int(va_list varg)
               _putchar('0');
               return (0);
        }
-	len += int_recur(number);
+	len += int_recur(negative);
 	return (len);
 }
 /**
@@ -28,7 +29,7 @@ int print_int(va_list varg)
  * @value: Input number.
  * Return: (Length of number).
  */
-int int_recur(int value)
+int int_recur(unsigned int value)
 {
 	int len;
 
