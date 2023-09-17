@@ -31,11 +31,11 @@ int print_str(va_list varg)
 	return (strlen(str));
 }
 /**
- * print_modular - printing modular symbol
+ * print_mod - printing modular symbol
  * @varg: Input percent to check.
  * Return: (1) always 1 to success
  */
-int print_modular(va_list varg)
+int print_mod(va_list varg)
 {
 	(void) varg;
 	_putchar('%');

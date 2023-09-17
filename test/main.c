@@ -14,7 +14,7 @@ int main(void)
     unsigned int ui;
     void *addr;
 
-        len2;
+        (void) len2;
         (void) ui;
         (void) addr;
         len = _printf("Character:[%c]\n", 'H');
@@ -48,8 +48,6 @@ int main(void)
         printf("%d\n", len);
         
 
-
-
     /* ui = (unsigned int)INT_MAX + 1024;
     addr = (void *)0x7ffe637541f0;
     _printf("Length:[%d, %i]\n", len, len);
@@ -73,6 +71,6 @@ int main(void)
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n");
-    printf("Unknown:[%r]\n");
-    return (0);*/
+    printf("Unknown:[%r]\n");*/
+    return (0);
 }
