@@ -16,7 +16,6 @@ int main(void)
     unsigned int ui;
     void *addr;
 
-        len2;
         (void) ui;
         (void) addr;
         len = _printf("Character:[%c]\n", 'H');
