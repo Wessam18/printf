@@ -32,7 +32,8 @@ int main(void)
         len = printf("Let's try to printf a simple sentence.\n");
         printf("%d\n", len);
 
-        len = _printf("%d", 2048);
+        printf("*****************TASK1**************\n");
+        len = _printf("%d\n", 2048);
         printf("%d\n", len);
         len = printf("%d\n", 2048);
         printf("%d\n", len);

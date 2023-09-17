@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 		} else
 		{
 			i++;
-			for (j = 0; j < 3; j++)
+			for (j = 0; j < 4; j++)
 			{
 				/****Checking if symbol the same in our vlist*****/
 				if (format[i] == format_functions[j].symbol)
@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 					len += format_functions[j].print(vlist);
 					break;
 				} }
-			if (j >= 3)
+			if (j >= 4)
 			{
 				i--;
 				_putchar(format[i]);
