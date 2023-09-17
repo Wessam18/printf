@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	{'c', print_char}, {'s', print_str}, {'%', print_modular},};
 
 	/*checking validation of format*/
-	if (format == NULL || (format[i] == '%' || (format[i + 1]) == '\0'))
+	if (format == NULL || (format[i] == '%' && (format[i + 1]) == '\0'))
 		return (-1);
 	/*printing the statement*/
 	va_start(vlist, format);
