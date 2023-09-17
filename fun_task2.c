@@ -16,19 +16,11 @@ int print_int(va_list varg)
 		negative *= (-1);
 		len++;
 	}
-<<<<<<< HEAD
        else if (number == 0)
        {
               _putchar('0');
               return (1);
        }
-=======
-	else if (number == 0)
-	{
-		_putchar('0');
-		return (0);
-	}
->>>>>>> 50f041334f095139684f76b6719c4c8252faa184
 	len += int_recur(negative);
 	return (len);
 }
