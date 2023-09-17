@@ -8,7 +8,7 @@
 int print_int(va_list varg)
 {
 	int number = va_arg(varg, int), len = 0;
-       unsigned int negative = number;
+	unsigned int negative = number;
 
 	if (number < 0)
 	{
@@ -16,11 +16,11 @@ int print_int(va_list varg)
 		number *= (-1);
 		len++;
 	}
-       else if (number == 0)
-       {
-              _putchar('0');
-              return (0);
-       }
+	else if (number == 0)
+	{
+		_putchar('0');
+		return (0);
+	}
 	len += int_recur(negative);
 	return (len);
 }
@@ -33,10 +33,10 @@ int int_recur(unsigned int value)
 {
 	int len;
 
-       if (value == 0)
-       {
-              return (0);
-       }
+	if (value == 0)
+	{
+		return (0);
+	}
 	len = (1 + int_recur(value / 10));
 	_putchar((value % 10) + '0');
 	return (len);
