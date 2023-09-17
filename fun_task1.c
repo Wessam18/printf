@@ -19,11 +19,12 @@ int print_str(va_list varg)
        {
               fputc(str[i], stdout);
        }
-       strlen(str);
+       return(strlen(str));
 }
 
 int print_modular(va_list varg)
 {
+       (void) varg;
        fputc('%', stdout);
        return (1);       
 }

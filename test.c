@@ -17,20 +17,19 @@ int main(void)
        printf("%d\n", len);
   
        len = printf("%c", 'A');
-       printf("%d\n", len);
-
-/**
- * @brief 
- * len = _printf("%s", NULL);
- * printf("%d\n", len);
- * len = printf("%s", NULL);
- * printf("%d\n", len);
- *  len = _printf("Let's try to printf a simple sentence.\n"); 
- * printf("%d\n", len);
- * len = printf("Let's try to printf a simple sentence.\n");
- * printf("%d\n", len);
- */
+       printf("%d\n", 'A');
        
+       len = _printf("%s", NULL);
+       printf("%d\n", len);
+       
+       len = printf("%s", NULL);
+       printf("%d\n", len);
+       
+       len = _printf("Let's try to printf a simple sentence.\n"); 
+       printf("%d\n", len);
+       
+       len = printf("Let's try to printf a simple sentence.\n");
+       printf("%d\n", len);
 
        return (0);
 }
