@@ -6,7 +6,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <string.h>
-#include <unistd.h>
 #include <limits.h>
 
 typedef struct pformat
@@ -15,6 +14,7 @@ typedef struct pformat
     int (*print)(va_list varg);
 } prtmt;
 
+int _putchar(char c);
 int _printf(const char *format, ...);
 int print_char(va_list varg);
 int print_str(va_list varg);

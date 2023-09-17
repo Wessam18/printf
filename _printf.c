@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			fputc(format[i], stdout);
+			_putchar(format[i]);
 			len++;
 		}
 
@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 			if (j >= 3)
 			{
 				i--;
-				fputc(format[i], stdout);
+				_putchar(format[i]);
 				len++;
 			}
 		}

@@ -3,7 +3,7 @@
 
 int print_char(va_list varg)
 {
-       fputc(va_arg(varg, int), stdout);
+       _putchar(va_arg(varg, int));
        return (1);
 }
 int print_str(va_list varg)
@@ -17,7 +17,7 @@ int print_str(va_list varg)
        }
        for (i = 0; str[i]; i++)
        {
-              fputc(str[i], stdout);
+              _putchar(str[i]);
        }
        return(strlen(str));
 }
@@ -25,6 +25,6 @@ int print_str(va_list varg)
 int print_modular(va_list varg)
 {
        (void) varg;
-       fputc('%', stdout);
+       _putchar('%');
        return (1);       
 }
