@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 
 	int len = 0, i = 0, j;
 
-	prtfmt format_functions[] = {
+	prtmt format_functions[] = {
 		{'c', print_char},
 		{'s', print_str},
 		{'%', print_modular},
@@ -19,9 +19,9 @@ int _printf(const char *format, ...)
 
 	/*checking validation of format*/
 	if (format == NULL)
-		return (-1)
+		return (-1);
 	/*printing the statement*/
-	va_start(vlist, format);
+	va_start (vlist, format);
 
 	while (format[i] != '\0')
 	{
