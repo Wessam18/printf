@@ -13,13 +13,13 @@ int print_int(va_list varg)
 	if (number < 0)
 	{
 		_putchar('-');
-		number *= (-1);
+		negative *= (-1);
 		len++;
 	}
        else if (number == 0)
        {
               _putchar('0');
-              return (0);
+              return (1);
        }
 	len += int_recur(negative);
 	return (len);
