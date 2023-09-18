@@ -7,7 +7,7 @@
 */
 int print_bin(va_list varg)
 {
-	unsigned long int number = va_arg(varg, unsigned long int);
+	unsigned int number = va_arg(varg, unsigned int);
 
 	if (number > 0)
 	{
@@ -24,7 +24,7 @@ int print_bin(va_list varg)
  * @value: input number to check.
  * Return: (length).
  */
-int bin_recur(unsigned long int value)
+int bin_recur(unsigned int value)
 {
 	int len = 0;
 
