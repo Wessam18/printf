@@ -6,12 +6,11 @@
  */
 int _printf(const char *format, ...)
 {
-	
 	va_list vlist;
 	int len = 0, i = 0, j;
 	prtmt format_functions[] = {
 	{'c', print_char}, {'s', print_str}, {'%', print_mod}, {'d', print_int},
-	{'i', print_int}};
+	{'i', print_int}, {'b', print_bin}, };
 
 	/*checking validation of format*/
 	if (format == NULL || (format[i] == '%' && (format[i + 1]) == '\0'))

@@ -140,14 +140,7 @@ int main(void)
 
     _printf(NULL);
     printf(NULL);
-
-<<<<<<< HEAD
-    _printf("%b", 98);
-
-=======
-    printf("*************TASK2****************");
->>>>>>> 4dc6a2658aa7fff6474ea01e55077f955cb823d7
-
+    
     _printf("%b\n", 98);
 
     /* ;

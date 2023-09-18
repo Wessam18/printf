@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	int len = 0, i = 0, j;
 	prtmt format_functions[] = {
 	{'c', print_char}, {'s', print_str}, {'%', print_mod}, {'d', print_int},
-	{'i', print_int}};
+	{'i', print_int}, {'b', print_bin}, };
 
 	/*checking validation of format*/
 	if (format == NULL || (format[i] == '%' && (format[i + 1]) == '\0'))
@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 		} else
 		{
 			i++;
-			for (j = 0; j < 5; j++)
+			for (j = 0; j < 6; j++)
 			{
 				/****Checking if symbol the same in our vlist*****/
 				if (format[i] == format_functions[j].symbol)
@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 					len += format_functions[j].print(vlist);
 					break;
 				} }
-			if (j >= 5)
+			if (j >= 6)
 			{
 				i--;
 				_putchar(format[i]);

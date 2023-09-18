@@ -29,5 +29,6 @@ int print_mod(va_list varg);
 int print_int(va_list varg);
 int int_recur(unsigned int value);
 int print_bin(va_list varg);
+int bin_recur(int value);
 
 #endif /*MAIN_H*/
