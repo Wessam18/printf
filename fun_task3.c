@@ -7,7 +7,7 @@
 */
 int print_bin(va_list varg)
 {
-	int number = va_arg(varg, int);
+	long int number = va_arg(varg, long int);
 
 	if (number == 0)
 	{
@@ -30,7 +30,7 @@ int print_bin(va_list varg)
  * Return: (length).
  */
 
-int bin_recur(int value)
+int bin_recur(long int value)
 {
 	int len = 0;
 
