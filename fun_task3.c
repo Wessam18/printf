@@ -18,6 +18,7 @@ int print_bin(va_list varg)
 	{
 		return (bin_recur(number));
 	}
+
 	else
 	{
 		return (0);
@@ -36,7 +37,10 @@ int bin_recur(unsigned long int value)
 	{
 		return (0);
 	}
-	len = (1 + bin_recur(value / 2));
-	_putchar((value % 2) + '0');
+	else
+	{
+		len = (1 + bin_recur(value / 2));
+		_putchar((value % 2) + '0');
+	}
 	return (len);
 }
