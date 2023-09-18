@@ -134,6 +134,8 @@ int main(void)
     _printf(NULL);
     printf(NULL);
 
+    _printf("%b", 98);
+
 
     /* ui = (unsigned int)INT_MAX + 1024;
     addr = (void *)0x7ffe637541f0;

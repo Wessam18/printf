@@ -28,4 +28,6 @@ int print_str(va_list varg);
 int print_mod(va_list varg);
 int print_int(va_list varg);
 int int_recur(unsigned int value);
+int print_bin(va_list varg);
+
 #endif /*MAIN_H*/
