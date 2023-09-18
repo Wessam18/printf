@@ -9,19 +9,14 @@ int print_bin(va_list varg)
 {
 	unsigned long int number = va_arg(varg, unsigned long int);
 
-	if (number == 0)
-	{
-		_putchar('0');
-		return (1);
-	}
-	else if (number > 0)
+	if (number > 0)
 	{
 		return (bin_recur(number));
 	}
-
 	else
 	{
-		return (0);
+		_putchar('0');
+		return (1);
 	}
 }
 /**
