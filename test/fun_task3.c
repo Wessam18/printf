@@ -7,7 +7,7 @@
 */
 int print_bin(va_list varg)
 {
-	int number = va_arg(varg, int);
+	long int number = va_arg(varg, long int);
 
 	if (number == 0)
 	{
@@ -29,8 +29,7 @@ int print_bin(va_list varg)
  * @value: input number to check.
  * Return: (length).
  */
-
-int bin_recur(int value)
+int bin_recur(long int value)
 {
 	int len = 0;
 
@@ -38,7 +37,10 @@ int bin_recur(int value)
 	{
 		return (0);
 	}
-	len = (1 + bin_recur(value / 2));
-	_putchar((value % 2) + '0');
+	else
+	{
+		len = (1 + bin_recur(value / 2));
+		_putchar((value % 2) + '0');
+	}
 	return (len);
 }
