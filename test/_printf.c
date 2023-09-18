@@ -6,6 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
+	
 	va_list vlist;
 	int len = 0, i = 0, j;
 	prtmt format_functions[] = {
