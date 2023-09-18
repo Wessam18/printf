@@ -21,7 +21,7 @@ int print_bin(va_list varg)
 
 	else
 	{
-		return (1);
+		return (0);
 	}
 }
 /**
