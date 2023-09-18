@@ -12,7 +12,7 @@ int print_bin(va_list varg)
 	if (number == 0)
 	{
 		_putchar('0');
-		return (0);
+		return (1);
 	}
 	else if (number > 0)
 	{
