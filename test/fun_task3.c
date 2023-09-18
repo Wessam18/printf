@@ -17,6 +17,5 @@ int print_bin(va_list varg)
 		x /= 2;
 	}
 
-
 	return (b);
 }

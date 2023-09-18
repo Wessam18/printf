@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 	int len = 0, i = 0, j;
 	prtmt format_functions[] = {
 	{'c', print_char}, {'s', print_str}, {'%', print_mod}, {'d', print_int},
-	{'i', print_int}, {'b', print_bin}};
+	{'i', print_int}};
 
 	/*checking validation of format*/
 	if (format == NULL || (format[i] == '%' && (format[i + 1]) == '\0'))
