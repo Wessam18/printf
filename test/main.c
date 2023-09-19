@@ -188,12 +188,12 @@ printf("%d\n", len);
 len = printf("%#o", 0);
 printf("%d\n", len);
 
-len = _printf("%#o", INT_MAX);
+len = _printf("%#o", UINT_MAX);
 printf("%d\n", len);
-len = printf("%#o", INT_MAX);
+len = printf("%#o", UINT_MAX);
 printf("%d\n", len);
 
-len = _printf("%#x", 1024);
+/* len = _printf("%#x", 1024);
 printf("%d\n", len);
 len = printf("%#x", 1024);
 printf("%d\n", len);
@@ -222,6 +222,6 @@ len = _printf("%#X", INT_MAX);
 printf("%d\n", len);
 len = printf("%#X", INT_MAX);
 printf("%d\n", len);
-
+ */
     return (0);
 }

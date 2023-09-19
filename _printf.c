@@ -2,6 +2,7 @@
 /**
  * _printf - our printf function.
  * @format: Input format.
+ * 
  * Return: (Length)
  */
 int _printf(const char *format, ...)
@@ -10,7 +11,7 @@ int _printf(const char *format, ...)
 	int len = 0, i = 0, j;
 	prtmt format_functions[] = { {'c', pchar}, {'s', pstr},
 	{'%', pmod}, {'d', pint}, {'i', pint}, {'b', pbin}, {'o', poct},
-	{'x', phexs}, {'X', phexc}, {'R', prot13,}};
+	{'x', phexs}, {'X', phexc}, {'R', prot13}, {'u', punsign}, };
 
 	/*checking validation of format*/
 	if (format == NULL || (format[i] == '%' && (format[i + 1]) == '\0'))
@@ -26,7 +27,7 @@ int _printf(const char *format, ...)
 		} else
 		{
 			i++;
-			for (j = 0; j < 10; j++)
+			for (j = 0; j < 11; j++)
 			{
 				/****Checking if symbol the same in our vlist*****/
 				if (format[i] == format_functions[j].symbol)
@@ -35,7 +36,7 @@ int _printf(const char *format, ...)
 					len += format_functions[j].print(vlist);
 					break;
 				} }
-			if (j >= 10)
+			if (j >= 11)
 			{
 				i--;
 				_putchar(format[i]);
