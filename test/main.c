@@ -224,16 +224,15 @@ len = printf("%#X", INT_MAX);
 printf("%d\n", len);
  */
 
-len = _printf("%r", "\nThis sentence is retrieved from va_args!"); 
+len = _printf("%s", "\nThis sentence is retrieved from va_args!"); 
 printf("%d\n", len);
-len = printf("%r", "\nThis sentence is retrieved from va_args!"); 
+len = printf("%s", "\nThis sentence is retrieved from va_args!"); 
 printf("%d\n", len);
 
-
-    len = _printf("%r\n", "holberton");
+    len = _printf("%s\n", "holberton");
     printf("%d\n", len);
 
-    len = _printf("%r\n", "school");
+    len = _printf("%s\n", "school");
     printf("%d\n", len);
 
     len = _printf("%r\n", "school");
