@@ -24,5 +24,5 @@ int x = 0, l = 0;
 			_putchar(str[x]);
 		}
 	}
-	return (len);
+	return (l);
 }
