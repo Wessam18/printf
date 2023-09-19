@@ -9,26 +9,32 @@ int poct(va_list varg)
 {
 	unsigned int number = va_arg(varg, unsigned int);
 
-	if (number == 0)
+	if (number > 0)
+	{
+		return (oct_recur(number));	
+	}
+	else
 	{
 		_putchar('0');
 		return (1);
 	}
-
-	oct_recur(number);
-	return (0);
 }
 /**
  * oct_recur - a function to print octal
  * @value: input number to check.
  * Return: (length).
  */
-void oct_recur(unsigned int value)
+int oct_recur(unsigned int value)
 {
+	int len = 0;
 	if (value == 0)
 	{
-		return;
+		return (0);
 	}
-	oct_recur(value / 8);
-	_putchar((value % 8) + '0');
+	else
+	{
+		len = (1 + oct_recur(value / 8));
+		_putchar((value % 8) + '0');
+	}
+	return (len);
 }

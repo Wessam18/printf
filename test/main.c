@@ -223,5 +223,11 @@ printf("%d\n", len);
 len = printf("%#X", INT_MAX);
 printf("%d\n", len);
  */
-    return (0);
+
+len = _printf("%r", "\nThis sentence is retrieved from va_args!"); 
+printf("%d\n", len);
+len = printf("%r", "\nThis sentence is retrieved from va_args!"); 
+printf("%d\n", len);
+
+return (0);
 }
