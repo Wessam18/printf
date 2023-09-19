@@ -29,6 +29,7 @@ int print_mod(va_list varg);
 int print_int(va_list varg);
 int int_recur(unsigned int value);
 int print_bin(va_list varg);
-int bin_recur(long int value);
-
+int bin_recur(unsigned int value);
+int print_rot13(va_list varg);
+void rot13_recur(char *str, char *result);
 #endif /*MAIN_H*/

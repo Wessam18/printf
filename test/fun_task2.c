@@ -1,43 +1,41 @@
 #include "main.h"
-
 /**
- * print_int - printing the int values.
- * @varg: Input number to check.
- * Return: (length) of the number.
- */
-int print_int(va_list varg)
+ *print_bin - function to convert int to binary
+ *
+ *@varg: number to print
+ *Return: (value).
+*/
+int print_bin(va_list varg)
 {
-	int number = va_arg(varg, int), len = 0;
-	unsigned int negative = number;
+	unsigned int number = va_arg(varg, unsigned int);
 
-	if (number < 0)
+	if (number > 0)
 	{
-		_putchar('-');
-		negative *= (-1);
-		len++;
+		return (bin_recur(number));
 	}
-	else if (number == 0)
+	else
 	{
 		_putchar('0');
 		return (1);
 	}
-	len += int_recur(negative);
-	return (len);
 }
 /**
- * int_recur - calculating the length of each value.
- * @value: Input number.
- * Return: (Length of number).
+ * bin_recur - a function to print binary
+ * @value: input number to check.
+ * Return: (length).
  */
-int int_recur(unsigned int value)
+int bin_recur(unsigned int value)
 {
-	int len;
+	int len = 0;
 
 	if (value == 0)
 	{
 		return (0);
 	}
-	len = (1 + int_recur(value / 10));
-	_putchar((value % 10) + '0');
+	else
+	{
+		len = (1 + bin_recur(value / 2));
+		_putchar((value % 2) + '0');
+	}
 	return (len);
 }

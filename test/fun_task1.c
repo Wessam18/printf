@@ -1,43 +1,43 @@
 #include "main.h"
-#include <string.h>
-/**
- * print_char - printing input char.
- * @varg: Input element to check
- * Return: (1) for char length.
- */
-int print_char(va_list varg)
-{
-	_putchar(va_arg(varg, int));
-	return (1);
-}
-/**
- * print_str - Printing input string.
- * @varg: Input string to check.
- * Return: (Length of the string).
- */
-int print_str(va_list varg)
-{
-	int i;
-	char *str = va_arg(varg, char *);
 
-	if (str == NULL)
+/**
+ * print_int - printing the int values.
+ * @varg: Input number to check.
+ * Return: (length) of the number.
+ */
+int print_int(va_list varg)
+{
+	int number = va_arg(varg, int), len = 0;
+	unsigned int negative = number;
+
+	if (number < 0)
 	{
-		str = "(null)";
+		_putchar('-');
+		negative *= (-1);
+		len++;
 	}
-	for (i = 0; str[i]; i++)
+	else if (number == 0)
 	{
-		_putchar(str[i]);
+		_putchar('0');
+		return (1);
 	}
-	return (strlen(str));
+	len += int_recur(negative);
+	return (len);
 }
 /**
- * print_mod - printing modular symbol
- * @varg: Input percent to check.
- * Return: (1) always 1 to success
+ * int_recur - calculating the length of each value.
+ * @value: Input number.
+ * Return: (Length of number).
  */
-int print_mod(va_list varg)
+int int_recur(unsigned int value)
 {
-	(void) varg;
-	_putchar('%');
-	return (1);
+	int len;
+
+	if (value == 0)
+	{
+		return (0);
+	}
+	len = (1 + int_recur(value / 10));
+	_putchar((value % 10) + '0');
+	return (len);
 }

@@ -3,7 +3,6 @@
 #include "main.h"
 #define ZERO 0
 
-
 /**
  * main - Entry point
  *
@@ -18,7 +17,9 @@ int main(void)
 
         (void) ui;
         (void) addr;
-        len = _printf("Character:[%c]\n", 'H');
+        (void) len2;
+
+       /*  len = _printf("Character:[%c]\n", 'H');
         printf("%d\n", len);
         len = printf("Character:[%c]\n", 'H');
         printf("%d\n", len);
@@ -31,8 +32,8 @@ int main(void)
         len = _printf("Let's try to printf a simple sentence.\n");
         printf("%d\n", len);
         len = printf("Let's try to printf a simple sentence.\n");
-        printf("%d\n", len);
-
+        printf("%d\n", len); */
+/* 
         printf("****************************TASK1*******************\n");
         len = _printf("%d\n", 2048);
         printf("%d\n", len);
@@ -66,9 +67,9 @@ int main(void)
 	    printf("Lelen:[%d]\n\n", len2);
 
 	    len = _printf("NULL: %i\n", NULL);
-	    len2 = printf("NULL: %i\nlenlen", NULL);
+	    len2 = printf("NULL: %i\n", NULL);
 	    printf("Len:[%d]\n", len);
-	    printf("Lelen:[%d]\n\n", len);
+	    printf("Len:[%d]\n\n", len);
 
 	    len = _printf("%d\n", INT_MAX);
 	    len2 = printf("%d\n", INT_MAX);
@@ -131,18 +132,19 @@ int main(void)
     printf("Len:[%d]\n", len);
     printf("Lelen:[%d]\n\n", len2);
     _printf("Negative:[%d]\n", -762534);
-    printf("Negative:[%d]\n", -762534);
-    len = (unsigned int)INT_MAX + 1024;
+    printf("Negative:[%d]\n", -762534); */
+    
+    /* len = (unsigned int)INT_MAX + 1024;
     len = _printf("Percent:[%%]\n");
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-
-    _printf(NULL);
-    printf(NULL);
+ */
+   /*  _printf(NULL);
+    printf(NULL); */
     
-    _printf("%b\n", 98);
-
+/*     _printf("%b\n", 98);
+ */
     /* ;
     addr = (void *)0x7ffe637541f0;
 
@@ -158,6 +160,23 @@ int main(void)
 
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");*/
+
+    len = _printf("%R", "HelloWorld");
+    printf("%d\n", len);
+    len = printf("%R", "HelloWorld");
+    printf("%d\n", len);
+
+    len = _printf("%R", "C IS Awesome");
+    printf("%d\n", len);
+
+    len = printf("%R", "C IS Awesome");
+    printf("%d\n", len);
+
+    len = _printf("%R", "AzzazAkl");
+    printf("%d\n", len);
+
+    len = printf("%R", "AzzazAkl");
+    printf("%d\n", len);
 
     return (0);
 }
