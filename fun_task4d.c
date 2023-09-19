@@ -22,8 +22,7 @@ int hexc_recur(unsigned long int value)
 
 	if (value == 0)
 	{
-		_putchar('0');
-		return (1);
+		return (0);
 	}
 	else
 	{
