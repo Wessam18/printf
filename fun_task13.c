@@ -7,7 +7,7 @@
 int prev(va_list varg)
 {
 char *str = va_arg(varg, char *);
-int x = 0, len = 0;
+int x = 0, l = 0;
 
 	if (str == NULL)
 	{
@@ -15,11 +15,11 @@ int x = 0, len = 0;
 	}
 	else
 	{
-		while (str[len] != '\0')
+		while (str[l] != '\0')
 		{
 			len++;
 		}
-		for (x = (len - 1); x >= 0; x--)
+		for (x = (l - 1); x >= 0; x--)
 		{
 			_putchar(str[x]);
 		}
