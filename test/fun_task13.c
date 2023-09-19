@@ -21,12 +21,15 @@ char *str = va_arg(varg, char *);
 */
 int rev_recur(char *str)
 {
-	int i, len;
+	int i, x;
 
-	len = strlen(str);
-	for (i = (len - 1); i >= 0; i--)
+	while (str[i] != '\0')
 	{
-		_putchar(str[i]);
+		i++;
 	}
-	return (len);
+	for (x = (i - 1); x >= 0; x--)
+	{
+		_putchar(str[x]);
+	}
+	return (i);
 }
