@@ -150,7 +150,7 @@ int main(void)
     addr = (void *)0x7ffe637541f0;    
  */
 
-   /*  len = _printf("Unsigned:[%u]", ui);
+  len = _printf("Unsigned:[%u]", ui);
     printf("%d\n", len);
 
     len = printf("Unsigned:[%u]", ui);
@@ -166,9 +166,9 @@ int main(void)
         printf("%d\n", len);
 
     len = printf("Unsigned hexadecimal:[%x, %X]", ui, ui);
-        printf("%d\n", len); */
-
-  /*       len = _printf("%o", 1024);
+        printf("%d\n", len);
+ 
+   len = _printf("%o", 1024);
     printf("%d\n", len);
     len = printf("%o", 1024);
     printf("%d\n", len);
@@ -181,39 +181,37 @@ int main(void)
     len = _printf("%o", UINT_MAX);
     printf("%d\n", len);
     len = printf("%o", UINT_MAX);
-    printf("%d\n", len); */
+    printf("%d\n", len);
 
-    len = _printf("%x", 0);
+   len = _printf("%x", 0);
     printf("%d\n", len);
     len = printf("%x", 0);
     printf("%d\n", len);
 
-    /* len = _printf("%X", 0);
+    len = _printf("%X", 0);
     printf("%d\n", len);
     len = printf("%X", 0);
-    printf("%d\n", len); */
+    printf("%d\n", len);
 
     len = _printf("%x", 1024);
     printf("%d\n", len);
     len = printf("%x", 1024);
     printf("%d\n", len);
 
-    /* len = _printf("%X", 1024);
+    len = _printf("%X", 1024);
     printf("%d\n", len);
     len = printf("%X", 1024);
-    printf("%d\n", len); */
+    printf("%d\n", len);
 
-len = _printf("m: %u", INT_MAX);
+    len = _printf("m: %u", INT_MAX);
     printf("%d\n", len);
     len = printf("o: %u", INT_MAX);
     printf("%d\n", len);
      /* len = _prio: ntf("%X", INT_MAX);
     printf("%d\n", len);
-    len = printf("%X", INT_MAX);
-    printf("%d\n", len); */
 
    
-    /* len =_printf("Address:[%p]\n", addr);
+    len =_printf("Address:[%p]\n", addr);
     printf("%d\n", len);
 
      len = printf("Address:[%p]\n", addr);
