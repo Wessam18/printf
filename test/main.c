@@ -229,5 +229,15 @@ printf("%d\n", len);
 len = printf("%r", "\nThis sentence is retrieved from va_args!"); 
 printf("%d\n", len);
 
+
+    len = _printf("%r\n", "holberton");
+    printf("%d\n", len);
+
+    len = _printf("%r\n", "school");
+    printf("%d\n", len);
+
+    len = _printf("%r\n", "school");
+    printf("%d\n", len); 
+    
 return (0);
 }
