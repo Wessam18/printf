@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *phexc - function to convert int to HEXAdecimal
+ *phexc - function to convert int to hexadecimal
  *
  *@varg: number to print
  *Return: (value).
@@ -8,33 +8,29 @@
 int phexc(va_list varg)
 {
 	unsigned long int number = va_arg(varg, unsigned long int);
-
-	return (hexc_recur(number));
-}
-/**
- * hexc_recur - a function to print HEXAdecimal
- * @value: input number to check.
- * Return: (length).
- */
-int hexc_recur(unsigned long int value)
-{
 	int len = 0;
 
-	if (value == 0)
+	if (number == 0)
 	{
-		return (0);
+		_putchar('0');
+		return (1);
 	}
 	else
 	{
-		if ((value % 16) <= 9)
+		while (number > 0)
 		{
-			len = (1 + hexc_recur(value / 16));
-			_putchar((value % 16) + '0');
-		}
-		else
-		{
-			len = (1 + hexc_recur(value / 16));
-			_putchar((value % 16) + 55);
+			int rem  = number % 16;
+
+			if (rem < 10)
+			{
+				_putchar(rem + '0');
+			}
+			else
+			{
+				_putchar(rem - 10 + 'A');
+			}
+			number /= 16;
+			len++;
 		}
 	}
 	return (len);

@@ -188,30 +188,30 @@ int main(void)
     len = printf("%x", 0);
     printf("%d\n", len);
 
-    /* len = _printf("%X", 0);
+    len = _printf("%X", 0);
     printf("%d\n", len);
     len = printf("%X", 0);
-    printf("%d\n", len); */
+    printf("%d\n", len);
 
     len = _printf("%x", 1024);
     printf("%d\n", len);
     len = printf("%x", 1024);
     printf("%d\n", len);
 
-    /* len = _printf("%X", 1024);
+    len = _printf("%X", 1024);
     printf("%d\n", len);
     len = printf("%X", 1024);
-    printf("%d\n", len); */
+    printf("%d\n", len);
 
 len = _printf("%x", INT_MAX);
     printf("%d\n", len);
     len = printf("%x", INT_MAX);
     printf("%d\n", len);
 
-    /* len = _printf("%X", INT_MAX);
+    len = _printf("%X", INT_MAX);
     printf("%d\n", len);
     len = printf("%X", INT_MAX);
-    printf("%d\n", len); */
+    printf("%d\n", len);
 
    
     /* len =_printf("Address:[%p]\n", addr);

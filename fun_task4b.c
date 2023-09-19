@@ -8,23 +8,29 @@
 int phexs(va_list varg)
 {
 	unsigned long int number = va_arg(varg, unsigned long int);
-int len = 0;
+	int len = 0;
 
 	if (number == 0)
 	{
-		return (0);
+		_putchar('0');
+		return (1);
 	}
 	else
 	{
-		if ((number % 16) <= 9)
+		while (number > 0)
 		{
-			len = (1 + (number / 16));
-			_putchar((number % 16) + '0');
-		}
-		else
-		{
-			len = (1 + (number / 16));
-			_putchar((number % 16) + 87);
+			int rem  = number % 16;
+
+			if (rem < 10)
+			{
+				_putchar(rem + '0');
+			}
+			else
+			{
+				_putchar(rem - 10 + 'a');
+			}
+			number /= 16;
+			len++;
 		}
 	}
 	return (len);
