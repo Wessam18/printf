@@ -30,7 +30,15 @@ int oct_recur(unsigned int value)
 	{
 		return (0);
 	}
+	if (value / 8 == 0)
+	{
+		_putchar((value % 8) + '0');
+		len++;
+	}
+	else
+	{
 	len = (1 + oct_recur(value / 8));
 	_putchar((value % 8) + '0');
+	}
 	return (len);
 }
