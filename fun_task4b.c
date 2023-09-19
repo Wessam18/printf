@@ -9,8 +9,15 @@ int phexs(va_list varg)
 {
 	unsigned long int number = va_arg(varg, unsigned long int);
 
-	return (hexs_recur(number));
-}
+	if (number > 0)
+	{
+		return (hexc_recur(number));
+	}
+	else
+	{
+		_putchar('0');
+		return (1);
+	}}
 /**
  * hexs_recur - a function to print hexadecimal
  * @value: input number to check.
@@ -27,20 +34,16 @@ int hexs_recur(unsigned long int value)
 	}
 	else
 	{
-		if ((value / 16) == 0)
+
+		if ((value % 16) <= 9)
 		{
-
-			if ((value % 16) <= 9)
-			{
-				len = (1 + hexs_recur(value / 16));
-				_putchar((value % 16) + '0');
-			}
-			else
-			{
-
-				len = (1 + hexs_recur(value / 16));
-				_putchar((value % 16) + 87);
-			}
+			len = (1 + hexs_recur(value / 16));
+			_putchar((value % 16) + '0');
+		}
+		else
+		{
+			len = (1 + hexs_recur(value / 16));
+			_putchar((value % 16) + 87);
 		}
 	}
 	return (len);
