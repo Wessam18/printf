@@ -10,11 +10,6 @@ int poct(va_list varg)
 {
 	unsigned int number = va_arg(varg, unsigned int);
 
-	if (number == 0)
-	{
-		_putchar('0');
-		return (1);
-	}
 	return (oct_recur(number));
 }
 /**
@@ -28,7 +23,8 @@ int oct_recur(unsigned int value)
 
 	if (value == 0)
 	{
-		return (0);
+		_putchar('0');
+		return (1);
 	}
 	if (value / 8 == 0)
 	{
