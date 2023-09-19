@@ -17,7 +17,7 @@ int x = 0, l = 0;
 	{
 		while (str[l] != '\0')
 		{
-			len++;
+			l++;
 		}
 		for (x = (l - 1); x >= 0; x--)
 		{
