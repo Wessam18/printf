@@ -14,7 +14,9 @@ int main(void)
     int len2;
     unsigned int ui;
     void *addr;
+    ui = (unsigned int)INT_MAX + 1024;
 
+        (void) ui;
         (void) addr;
         (void) len2;
 
@@ -148,39 +150,25 @@ int main(void)
     addr = (void *)0x7ffe637541f0;    
  */
 
-  /*   _printf("Unsigned:[%u]\n", ui);
+   /*  len = _printf("Unsigned:[%u]", ui);
     printf("%d\n", len);
 
-    /* len = printf("Unsigned:[%u]\n", ui);
+    len = printf("Unsigned:[%u]", ui);
+        printf("%d\n", len);
+
+    len = _printf("Unsigned octal:[%o]", ui);
+        printf("%d\n", len);
+
+     len = printf("Unsigned octal:[%o]", ui);
+        printf("%d\n", len);
+
+    len = _printf("Unsigned hexadecimal:[%x, %X]", ui, ui);
+        printf("%d\n", len);
+
+    len = printf("Unsigned hexadecimal:[%x, %X]", ui, ui);
         printf("%d\n", len); */
 
-    /* len = _printf("Unsigned octal:[%o]\n", ui);
-        printf("%d\n", len); */
-
-     len = printf("Unsigned octal:[%o]\n", ui);
-        printf("%d\n", len);
-
-    len = _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-        printf("%d\n", len);
-
-    len = printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-        printf("%d\n", len);
-
-   
-    /* len =_printf("Address:[%p]\n", addr);
-    printf("%d\n", len);
-
-     len = printf("Address:[%p]\n", addr);
-        printf("%d\n", len); */
-
-
-    len = _printf("Unknown:[%r]\n");
-        printf("%d\n", len);
-
-    len = printf("Unknown:[%r]\n");
-    printf("%d\n", len);
-
-    len = _printf("%o", 1024);
+  /*       len = _printf("%o", 1024);
     printf("%d\n", len);
     len = printf("%o", 1024);
     printf("%d\n", len);
@@ -193,7 +181,7 @@ int main(void)
     len = _printf("%o", UINT_MAX);
     printf("%d\n", len);
     len = printf("%o", UINT_MAX);
-    printf("%d\n", len);
+    printf("%d\n", len); */
 
     len = _printf("%#x", 1024);
     printf("%d\n", len);
@@ -224,6 +212,22 @@ int main(void)
     printf("%d\n", len);
     len = printf("%#X", INT_MAX);
     printf("%d\n", len);
+
+   
+    /* len =_printf("Address:[%p]\n", addr);
+    printf("%d\n", len);
+
+     len = printf("Address:[%p]\n", addr);
+        printf("%d\n", len); */
+
+
+   /*  len = _printf("Unknown:[%r]\n");
+        printf("%d\n", len);
+
+    len = printf("Unknown:[%r]\n");
+    printf("%d\n", len);
+ */
+    
 
    /*  len = _printf("%R", "HelloWorld");
     printf("%d\n", len);

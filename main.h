@@ -33,7 +33,7 @@ int bin_recur(unsigned int value);
 int poct(va_list varg);
 int oct_recur(unsigned int value);
 int phexs(va_list varg);
-int hexs_recur(unsigned long int value);
+int hexs_recur(unsigned int value);
 int phexc(va_list varg);
 int hexc_recur(unsigned long int value);
 int punsign(va_list varg);
