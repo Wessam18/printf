@@ -149,13 +149,13 @@ int main(void)
  */
 
   /*   _printf("Unsigned:[%u]\n", ui);
-    /*printf("%d\n", len);*/
+    printf("%d\n", len);
 
-    len = printf("Unsigned:[%u]\n", ui);
-        printf("%d\n", len);
+    /* len = printf("Unsigned:[%u]\n", ui);
+        printf("%d\n", len); */
 
-    len = _printf("Unsigned octal:[%o]\n", ui);
-        printf("%d\n", len);
+    /* len = _printf("Unsigned octal:[%o]\n", ui);
+        printf("%d\n", len); */
 
      len = printf("Unsigned octal:[%o]\n", ui);
         printf("%d\n", len);
