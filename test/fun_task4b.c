@@ -42,6 +42,7 @@ int hexs_recur(unsigned long int value)
 		}
 		else
 		{
+			
 			len = (1 + hexs_recur(value / 16));
 			_putchar((value % 16) + 87);
 		}

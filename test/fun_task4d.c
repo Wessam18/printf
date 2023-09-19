@@ -38,6 +38,7 @@ int hexc_recur(unsigned long int value)
 		{
 			len = (1 + hexc_recur(value / 16));
 			_putchar((value % 16) + '0');
+		
 		}
 		else
 		{
