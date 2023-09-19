@@ -203,12 +203,11 @@ int main(void)
     len = printf("%X", 1024);
     printf("%d\n", len); */
 
-len = _printf("%x", INT_MAX);
+len = _printf("m: %u", INT_MAX);
     printf("%d\n", len);
-    len = printf("%x", INT_MAX);
+    len = printf("o: %u", INT_MAX);
     printf("%d\n", len);
-
-    /* len = _printf("%X", INT_MAX);
+     /* len = _prio: ntf("%X", INT_MAX);
     printf("%d\n", len);
     len = printf("%X", INT_MAX);
     printf("%d\n", len); */
