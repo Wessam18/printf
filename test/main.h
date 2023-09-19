@@ -39,6 +39,8 @@ int hexc_recur(unsigned long int value);
 int punsign(va_list varg);
 int unsign_recur(unsigned int value);
 int prev(va_list varg);
+int rev_recur(char *str);
 int prot13(va_list varg);
 void rot13_recur(char *str, char *result);
+
 #endif /*MAIN_H*/
