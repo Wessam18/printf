@@ -150,7 +150,7 @@ int main(void)
     addr = (void *)0x7ffe637541f0;    
  */
 
-   /*  len = _printf("Unsigned:[%u]", ui);
+  /*  len = _printf("Unsigned:[%u]", ui);
     printf("%d\n", len);
 
     len = printf("Unsigned:[%u]", ui);
@@ -166,9 +166,9 @@ int main(void)
         printf("%d\n", len);
 
     len = printf("Unsigned hexadecimal:[%x, %X]", ui, ui);
-        printf("%d\n", len); */
-
-  /*       len = _printf("%o", 1024);
+        printf("%d\n", len);
+ */
+   /*  len = _printf("%o", 1024);
     printf("%d\n", len);
     len = printf("%o", 1024);
     printf("%d\n", len);
@@ -183,7 +183,7 @@ int main(void)
     len = printf("%o", UINT_MAX);
     printf("%d\n", len); */
 
-    len = _printf("%x", 0);
+   /*  len = _printf("%x", 0);
     printf("%d\n", len);
     len = printf("%x", 0);
     printf("%d\n", len);
@@ -191,9 +191,9 @@ int main(void)
     len = _printf("%X", 0);
     printf("%d\n", len);
     len = printf("%X", 0);
-    printf("%d\n", len);
+    printf("%d\n", len); */
 
-    len = _printf("%x", 1024);
+  /*   len = _printf("%x", 1024);
     printf("%d\n", len);
     len = printf("%x", 1024);
     printf("%d\n", len);
@@ -201,16 +201,16 @@ int main(void)
     len = _printf("%X", 1024);
     printf("%d\n", len);
     len = printf("%X", 1024);
+    printf("%d\n", len); */
+
+    len = _printf("%x", UINT_MAX);
+    printf("%d\n", len);
+    len = printf("%x", UINT_MAX);
     printf("%d\n", len);
 
-    len = _printf("%x", INT_MAX);
+    len = _printf("%X", UINT_MAX);
     printf("%d\n", len);
-    len = printf("%x", INT_MAX);
-    printf("%d\n", len);
-
-    len = _printf("%X", INT_MAX);
-    printf("%d\n", len);
-    len = printf("%X", INT_MAX);
+    len = printf("%X", UINT_MAX);
     printf("%d\n", len);
 
    
