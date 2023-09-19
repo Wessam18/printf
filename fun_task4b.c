@@ -1,17 +1,17 @@
 #include "main.h"
 /**
  *phexs - function to convert int to hexadecimal
+ *
  *@varg: number to print
  *Return: (value).
 */
 int phexs(va_list varg)
 {
-	unsigned int number = va_arg(varg, unsigned int);
+	unsigned long int number = va_arg(varg, unsigned long int);
 
 	if (number > 0)
 	{
-		return (hexc_recur(number));
-
+		return (hexs_recur(number));
 	}
 	else
 	{
@@ -24,24 +24,24 @@ int phexs(va_list varg)
  * @value: input number to check.
  * Return: (length).
  */
-int hexs_recur(unsigned int value)
+int hexs_recur(unsigned long int value)
 {
 	int len = 0;
 
 	if (value == 0)
 	{
-		_putchar('0');
-		return (1);
+		return (0);
 	}
 	else
 	{
 		if ((value % 16) <= 9)
 		{
 			len = (1 + hexs_recur(value / 16));
-			_putchar((value % 16) + 'a');
+			_putchar((value % 16) + '0');
 		}
 		else
 		{
+
 			len = (1 + hexs_recur(value / 16));
 			_putchar((value % 16) + 87);
 		}
