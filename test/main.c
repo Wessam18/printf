@@ -15,7 +15,6 @@ int main(void)
     unsigned int ui;
     void *addr;
 
-        (void) ui;
         (void) addr;
         (void) len2;
 
@@ -146,20 +145,85 @@ int main(void)
     /* _printf("%b\n", 98); */
 
     /* ;
-    addr = (void *)0x7ffe637541f0;
+    addr = (void *)0x7ffe637541f0;    
+ */
 
-    _printf("Unsigned:[%u]\n", ui);
-    printf("Unsigned:[%u]\n", ui);
-    _printf("Unsigned octal:[%o]\n", ui);
-    printf("Unsigned octal:[%o]\n", ui);
-    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+  /*   _printf("Unsigned:[%u]\n", ui);
+    /*printf("%d\n", len);*/
+
+    len = printf("Unsigned:[%u]\n", ui);
+        printf("%d\n", len);
+
+    len = _printf("Unsigned octal:[%o]\n", ui);
+        printf("%d\n", len);
+
+     len = printf("Unsigned octal:[%o]\n", ui);
+        printf("%d\n", len);
+
+    len = _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+        printf("%d\n", len);
+
+    len = printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+        printf("%d\n", len);
+
    
-    _printf("Address:[%p]\n", addr);
-    printf("Address:[%p]\n", addr);
+    /* len =_printf("Address:[%p]\n", addr);
+    printf("%d\n", len);
 
-    _printf("Unknown:[%r]\n");
-    printf("Unknown:[%r]\n");*/
+     len = printf("Address:[%p]\n", addr);
+        printf("%d\n", len); */
+
+
+    len = _printf("Unknown:[%r]\n");
+        printf("%d\n", len);
+
+    len = printf("Unknown:[%r]\n");
+    printf("%d\n", len);
+
+    len = _printf("%o", 1024);
+    printf("%d\n", len);
+    len = printf("%o", 1024);
+    printf("%d\n", len);
+
+    len = _printf("%o", 0);
+    printf("%d\n", len);
+    len = printf("%o", 0);
+    printf("%d\n", len);
+
+    len = _printf("%o", UINT_MAX);
+    printf("%d\n", len);
+    len = printf("%o", UINT_MAX);
+    printf("%d\n", len);
+
+    len = _printf("%#x", 1024);
+    printf("%d\n", len);
+    len = printf("%#x", 1024);
+    printf("%d\n", len);
+
+    len = _printf("%#x", 0);
+    printf("%d\n", len);
+    len = printf("%#x", 0);
+    printf("%d\n", len);
+
+    len = _printf("%#x", INT_MAX);
+    printf("%d\n", len);
+    len = printf("%#x", INT_MAX);
+    printf("%d\n", len);
+
+    len = _printf("%#X", 1024);
+    printf("%d\n", len);
+    len = printf("%#X", 1024);
+    printf("%d\n", len);
+
+    len = _printf("%#X", 0);
+    printf("%d\n", len);
+    len = printf("%#X", 0);
+    printf("%d\n", len);
+
+    len = _printf("%#X", INT_MAX);
+    printf("%d\n", len);
+    len = printf("%#X", INT_MAX);
+    printf("%d\n", len);
 
    /*  len = _printf("%R", "HelloWorld");
     printf("%d\n", len);
@@ -176,58 +240,13 @@ int main(void)
     printf("%d\n", len);
 
     len = printf("%R", "AzzazAkl");
+    printf("%d\n", len);*/
+
+    /* 
+    len = _printf("%s", "\nThis sentence is retrieved from va_args!"); 
     printf("%d\n", len);
- */
-len = _printf("%o", 1024);
-printf("%d\n", len);
-len = printf("%o", 1024);
-printf("%d\n", len);
-
-len = _printf("%o", 0);
-printf("%d\n", len);
-len = printf("%o", 0);
-printf("%d\n", len);
-
-len = _printf("%o", UINT_MAX);
-printf("%d\n", len);
-len = printf("%o", UINT_MAX);
-printf("%d\n", len);
-
-/* len = _printf("%#x", 1024);
-printf("%d\n", len);
-len = printf("%#x", 1024);
-printf("%d\n", len);
-
-len = _printf("%#x", 0);
-printf("%d\n", len);
-len = printf("%#x", 0);
-printf("%d\n", len);
-
-len = _printf("%#x", INT_MAX);
-printf("%d\n", len);
-len = printf("%#x", INT_MAX);
-printf("%d\n", len);
-
-len = _printf("%#X", 1024);
-printf("%d\n", len);
-len = printf("%#X", 1024);
-printf("%d\n", len);
-
-len = _printf("%#X", 0);
-printf("%d\n", len);
-len = printf("%#X", 0);
-printf("%d\n", len);
-
-len = _printf("%#X", INT_MAX);
-printf("%d\n", len);
-len = printf("%#X", INT_MAX);
-printf("%d\n", len);
- */
-
-/* len = _printf("%s", "\nThis sentence is retrieved from va_args!"); 
-printf("%d\n", len);
-len = printf("%s", "\nThis sentence is retrieved from va_args!"); 
-printf("%d\n", len);
+    len = printf("%s", "\nThis sentence is retrieved from va_args!"); 
+    printf("%d\n", len);
 
     len = _printf("%r\n", "holberton");
     printf("%d\n", len);
@@ -236,7 +255,7 @@ printf("%d\n", len);
     printf("%d\n", len);
 
     len = _printf("%r\n", "school");
-    printf("%d\n", len);  */
+    printf("%d\n", len); */
     
 return (0);
 }

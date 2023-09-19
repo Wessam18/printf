@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  *poct - function to convert int to octal
  *
@@ -9,15 +10,7 @@ int poct(va_list varg)
 {
 	unsigned int number = va_arg(varg, unsigned int);
 
-	if (number > 0)
-	{
-		return (oct_recur(number));	
-	}
-	else
-	{
-		_putchar('0');
-		return (1);
-	}
+	return (oct_recur(number));
 }
 /**
  * oct_recur - a function to print octal
@@ -27,14 +20,21 @@ int poct(va_list varg)
 int oct_recur(unsigned int value)
 {
 	int len = 0;
+
 	if (value == 0)
 	{
-		return (0);
+		_putchar('0');
+		return (1);
+	}
+	if (value / 8 == 0)
+	{
+		_putchar((value % 8) + '0');
+		len++;
 	}
 	else
 	{
-		len = (1 + oct_recur(value / 8));
-		_putchar((value % 8) + '0');
+	len = (1 + oct_recur(value / 8));
+	_putchar((value % 8) + '0');
 	}
 	return (len);
 }
