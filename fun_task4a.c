@@ -15,21 +15,22 @@ int poct(va_list varg)
 		_putchar('0');
 		return (1);
 	}
-
-	oct_recur(number);
-	return (0);
+	return (oct_recur(number));
 }
 /**
  * oct_recur - a function to print octal
  * @value: input number to check.
  * Return: (length).
  */
-void oct_recur(unsigned int value)
+int oct_recur(unsigned int value)
 {
+	int len = 0;
+
 	if (value == 0)
 	{
-		return;
+		return (0);
 	}
-	oct_recur(value / 8);
+	len = (1 + oct_recur(value / 8));
 	_putchar((value % 8) + '0');
+	return (len);
 }

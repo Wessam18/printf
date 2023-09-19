@@ -178,19 +178,19 @@ int main(void)
     len = printf("%R", "AzzazAkl");
     printf("%d\n", len);
  */
-len = _printf("%#o", 1024);
+len = _printf("%o", 1024);
 printf("%d\n", len);
-len = printf("%#o", 1024);
-printf("%d\n", len);
-
-len = _printf("%#o", 0);
-printf("%d\n", len);
-len = printf("%#o", 0);
+len = printf("%o", 1024);
 printf("%d\n", len);
 
-len = _printf("%#o", UINT_MAX);
+len = _printf("%o", 0);
 printf("%d\n", len);
-len = printf("%#o", UINT_MAX);
+len = printf("%o", 0);
+printf("%d\n", len);
+
+len = _printf("%o", UINT_MAX);
+printf("%d\n", len);
+len = printf("%o", UINT_MAX);
 printf("%d\n", len);
 
 /* len = _printf("%#x", 1024);
@@ -224,19 +224,19 @@ len = printf("%#X", INT_MAX);
 printf("%d\n", len);
  */
 
-len = _printf("%s", "\nThis sentence is retrieved from va_args!"); 
+/* len = _printf("%s", "\nThis sentence is retrieved from va_args!"); 
 printf("%d\n", len);
 len = printf("%s", "\nThis sentence is retrieved from va_args!"); 
 printf("%d\n", len);
 
-    len = _printf("%s\n", "holberton");
-    printf("%d\n", len);
-
-    len = _printf("%s\n", "school");
+    len = _printf("%r\n", "holberton");
     printf("%d\n", len);
 
     len = _printf("%r\n", "school");
-    printf("%d\n", len); 
+    printf("%d\n", len);
+
+    len = _printf("%r\n", "school");
+    printf("%d\n", len);  */
     
 return (0);
 }
