@@ -30,5 +30,11 @@ int print_int(va_list varg);
 int int_recur(unsigned int value);
 int print_bin(va_list varg);
 int bin_recur(long int value);
+int print_oct(va_list varg);
+int oct_recur(unsigned long int value);
+int print_hexs(va_list varg);
+int hexs_recur(unsigned long int value);
+int print_hexc(va_list varg);
+int hexc_recur(unsigned long int value);
 
 #endif /*MAIN_H*/

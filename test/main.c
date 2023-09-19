@@ -18,7 +18,8 @@ int main(void)
 
         (void) ui;
         (void) addr;
-        len = _printf("Character:[%c]\n", 'H');
+        (void) len2;
+        /* len = _printf("Character:[%c]\n", 'H');
         printf("%d\n", len);
         len = printf("Character:[%c]\n", 'H');
         printf("%d\n", len);
@@ -141,7 +142,61 @@ int main(void)
     _printf(NULL);
     printf(NULL);
     
-    _printf("%b\n", 98);
+    _printf("%b\n", 98); */
+
+ /* len = _printf("Character:[%c]\n", 'H');
+        printf("%d\n", len);
+        len = printf("Character:[%c]\n", 'H');
+        printf("%d\n", len);
+ */
+
+    
+    len = _printf("%#o", 1024);
+     printf("%d\n", len);
+    len = printf("%#o", 1024);
+     printf("%d\n", len);
+
+    len =_printf("%#o", 0);
+     printf("%d\n", len);
+    len = printf("%#o", 0);
+     printf("%d\n", len);
+
+    len = _printf("%#o", UINT_MAX);
+    printf("%d\n", len);
+    len = printf("%#o", UINT_MAX);
+    printf("%d\n", len);
+
+
+    len = _printf("%#x", 1024);
+    printf("%d\n", len);
+    len = printf("%#x", 1024);
+    printf("%d\n", len);
+
+    len =_printf("%#x", 0);
+    printf("%d\n", len);
+    len = printf("%#x", 0);
+    printf("%d\n", len);
+
+    len = _printf("%#x", UINT_MAX);
+    printf("%d\n", len);
+    len = printf("%#x", UINT_MAX);
+    printf("%d\n", len);
+
+
+    len = _printf("%#X", 1024);
+    printf("%d\n", len);
+    len = printf("%#X", 1024);
+    printf("%d\n", len);
+
+    len = _printf("%#X", 0);
+    printf("%d\n", len);
+    len = printf("%#X", 0);
+    printf("%d\n", len);
+
+    len = _printf("%#X", UINT_MAX);
+    printf("%d\n", len);
+    len = printf("%#X", UINT_MAX);
+    printf("%d\n", len);
 
     /* ;
     addr = (void *)0x7ffe637541f0;
