@@ -8,7 +8,8 @@
 int phexc(va_list varg)
 {
 	unsigned long int number = va_arg(varg, unsigned long int);
-	int len = 0;
+	int len = 0, rem, x;
+	char hexa[100];
 
 	if (number == 0)
 	{
@@ -17,20 +18,24 @@ int phexc(va_list varg)
 	}
 	else
 	{
-		while (number > 0)
+		while (number != 0)
 		{
-			int rem  = number % 16;
+			rem  = number % 16;
 
 			if (rem < 10)
 			{
-				_putchar(rem + '0');
+				hexa[len] = rem + 48;
 			}
 			else
 			{
-				_putchar(rem - 10 + 'A');
+				hexa[len] = rem + 65;
 			}
 			number /= 16;
 			len++;
+		}
+		for (x = (len - 1); x >= 0; x--)
+		{
+			_putchar(hexa[x]);
 		}
 	}
 	return (len);

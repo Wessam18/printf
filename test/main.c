@@ -203,7 +203,7 @@ int main(void)
     len = printf("%X", 1024);
     printf("%d\n", len);
 
-len = _printf("%x", INT_MAX);
+    len = _printf("%x", INT_MAX);
     printf("%d\n", len);
     len = printf("%x", INT_MAX);
     printf("%d\n", len);
