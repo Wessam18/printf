@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_rot13 - printing a string using rot13
+ * prot13 - printing a string using rot13
  * @varg: input element.
  * Return: (Success) 0
  */
-int print_rot13(va_list varg)
+int prot13(va_list varg)
 {
 	char *str = va_arg(varg, char*);
 	int a;
@@ -28,6 +28,7 @@ int print_rot13(va_list varg)
 /**
  * rot13_recur - rotating the string.
  * @str: input string.
+ * @result: output string.
  */
 void rot13_recur(char *str, char *result)
 {

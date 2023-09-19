@@ -8,10 +8,9 @@ int _printf(const char *format, ...)
 {
 	va_list vlist;
 	int len = 0, i = 0, j;
-	prtmt format_functions[] = {
-	{'c', print_char}, {'s', print_str}, {'%', print_mod}, {'d', print_int},
-	{'i', print_int}, {'b', print_bin}, {'o', print_oct}, {'x', print_hexs},
-	{'X', print_hexc}};
+	prtmt format_functions[] = { {'c', pchar}, {'s', pstr},
+	{'%', pmod}, {'d', pint}, {'i', pint}, {'b', pbin}, {'o', poct},
+	{'x', phexs}, {'X', phexc}, {'R', prot13}, };
 
 	/*checking validation of format*/
 	if (format == NULL || (format[i] == '%' && (format[i + 1]) == '\0'))
@@ -27,7 +26,7 @@ int _printf(const char *format, ...)
 		} else
 		{
 			i++;
-			for (j = 0; j < 9; j++)
+			for (j = 0; j < 10; j++)
 			{
 				/****Checking if symbol the same in our vlist*****/
 				if (format[i] == format_functions[j].symbol)
@@ -36,7 +35,7 @@ int _printf(const char *format, ...)
 					len += format_functions[j].print(vlist);
 					break;
 				} }
-			if (j >= 9)
+			if (j >= 10)
 			{
 				i--;
 				_putchar(format[i]);

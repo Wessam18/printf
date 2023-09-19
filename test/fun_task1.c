@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_int - printing the int values.
+ * pint - printing the int values.
  * @varg: Input number to check.
  * Return: (length) of the number.
  */
-int print_int(va_list varg)
+int pint(va_list varg)
 {
 	int number = va_arg(varg, int), len = 0;
 	unsigned int negative = number;

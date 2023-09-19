@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- *print_oct - function to convert int to octal
+ *poct - function to convert int to octal
  *
  *@varg: number to print
  *Return: (value).
 */
-int print_oct(va_list varg)
+int poct(va_list varg)
 {
 	unsigned long int number = va_arg(varg, unsigned long int);
 
