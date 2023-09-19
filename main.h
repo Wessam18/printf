@@ -31,7 +31,7 @@ int int_recur(unsigned int value);
 int pbin(va_list varg);
 int bin_recur(unsigned int value);
 int poct(va_list varg);
-int oct_recur(unsigned int value);
+void oct_recur(unsigned int value);
 int phexs(va_list varg);
 int hexs_recur(unsigned long int value);
 int phexc(va_list varg);
