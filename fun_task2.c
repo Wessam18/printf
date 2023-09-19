@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- *print_bin - function to convert int to binary
+ *pbin - function to convert int to binary
  *
  *@varg: number to print
  *Return: (value).
 */
-int print_bin(va_list varg)
+int pbin(va_list varg)
 {
 	unsigned int number = va_arg(varg, unsigned int);
 
