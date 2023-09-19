@@ -9,15 +9,7 @@ int phexc(va_list varg)
 {
 	unsigned long int number = va_arg(varg, unsigned long int);
 
-	if (number > 0)
-	{
-		return (hexc_recur(number));
-	}
-	else
-	{
-		_putchar('0');
-		return (1);
-	}
+	return (hexc_recur(number));
 }
 /**
  * hexc_recur - a function to print HEXAdecimal
@@ -30,7 +22,8 @@ int hexc_recur(unsigned long int value)
 
 	if (value == 0)
 	{
-		return (0);
+		_putchar('0');
+		return (1);
 	}
 	else
 	{
