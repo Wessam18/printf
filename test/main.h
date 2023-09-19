@@ -36,7 +36,10 @@ int phexs(va_list varg);
 int hexs_recur(unsigned long int value);
 int phexc(va_list varg);
 int hexc_recur(unsigned long int value);
+int punsign(va_list varg);
+int unsign_recur(unsigned int value);
 int prot13(va_list varg);
 void rot13_recur(char *str, char *result);
+
 
 #endif /*MAIN_H*/
