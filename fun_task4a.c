@@ -29,7 +29,7 @@ int oct_recur(unsigned int x)
 	}
 	else
 	{
-		len += intohex(x / 8);
+		len += oct_recur(x / 8);
 		len += _putchar((x % 8) + '0');
 	}
 	return (len);

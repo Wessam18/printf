@@ -7,6 +7,7 @@
 #include <stdarg.h>
 #include <string.h>
 #include <limits.h>
+#include <ctype.h>
 
 /***********Struct_Declarations**********/
 /**

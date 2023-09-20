@@ -207,6 +207,19 @@ int main(void)
     printf("%d\n", len);
     len = printf("o: %u", INT_MAX);
     printf("%d\n", len);
+
+    len = _printf("%R", "HelloWorld");
+    printf("%d\n", len);
+    len = printf("%R", "HelloWorld");
+    printf("%d\n", len);
+
+    len = _printf("%R", "C IS Awesome");
+    printf("%d\n", len);
+
+    len = printf("%R", "C IS Awesome");
+    printf("%d\n", len);
+
+
      /* len = _prio: ntf("%X", INT_MAX);
     printf("%d\n", len);
 
@@ -226,22 +239,6 @@ int main(void)
  */
     
 
-   /*  len = _printf("%R", "HelloWorld");
-    printf("%d\n", len);
-    len = printf("%R", "HelloWorld");
-    printf("%d\n", len);
-
-    len = _printf("%R", "C IS Awesome");
-    printf("%d\n", len);
-
-    len = printf("%R", "C IS Awesome");
-    printf("%d\n", len);
-
-    len = _printf("%R", "AzzazAkl");
-    printf("%d\n", len);
-
-    len = printf("%R", "AzzazAkl");
-    printf("%d\n", len);*/
 
     /* 
     len = _printf("%s", "\nThis sentence is retrieved from va_args!"); 

@@ -12,8 +12,8 @@ int phexs(va_list varg)
 	return (intohex(number));
 }
 /**
- * hexc_recurs - a function to print HEXAdecimal
- * @value: input number to check.
+ * intohex - a function to print HEXAdecimal
+ * @x: input number to check.
  * Return: (length).
  */
 int intohex(unsigned long int x)
