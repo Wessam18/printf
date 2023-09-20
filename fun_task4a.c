@@ -14,7 +14,7 @@ int poct(va_list varg)
 }
 /**
  * oct_recur - a function to print octal
- * @value: input number to check.
+ * @x: input number to check.
  * Return: (length).
  */
 int oct_recur(unsigned int x)
@@ -23,7 +23,7 @@ int oct_recur(unsigned int x)
 
 	if (x / 8 == 0)
 	{
-		
+
 		len += _putchar((x % 16) + '0');
 
 	}
