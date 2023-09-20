@@ -22,9 +22,10 @@
        X: used to handle capital hexadecimal numbers.
        r: used to print a reverse string.
        R: used to print a string using Rot13.
-       
+
 .SH EXAMPELES
 
+       _printf("%c", 'A');
 .SH "SEE ALSO"
        printf(1)
 
