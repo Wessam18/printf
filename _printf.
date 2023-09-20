@@ -25,6 +25,11 @@
 
 .SH EXAMPELES
 
+       _printf("%c", 'A');
+       _printf("%s", 'Azzaz');
+       _printf("%", '%');
+
+
 .SH "SEE ALSO"
        printf(1)
 
