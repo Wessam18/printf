@@ -203,9 +203,9 @@ int main(void)
     len = printf("%X", 1024);
     printf("%d\n", len);
 
-    len = _printf("m: %u", INT_MAX);
+    len = _printf("m: %u", 0);
     printf("%d\n", len);
-    len = printf("o: %u", INT_MAX);
+    len = printf("o: %u", 0);
     printf("%d\n", len);
 
     len = _printf("%R", "HelloWorld");

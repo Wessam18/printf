@@ -9,6 +9,12 @@ int punsign(va_list varg)
 {
 	unsigned int number = va_arg(varg, int);
 
+	if (number == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+
 	return (int_recur(number));
 }
 /**
@@ -19,6 +25,7 @@ int punsign(va_list varg)
 int unsign_recur(unsigned int x)
 {
 	int len = 0;
+
 	if (x / 10 == 0)
 	{
 		len += _putchar((x % 10) + '0');
