@@ -27,7 +27,9 @@
 
        _printf("%c", 'A');
        _printf("%s", 'Azzaz');
-       _printf("%", '%');
+       _printf("%%", '%');
+       _printf("%d", 5);
+
 
 
 .SH "SEE ALSO"
