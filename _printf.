@@ -30,6 +30,8 @@
        _printf("%%", '%');
        _printf("%d", 5);
        _printf(""");
+              _printf(""");
+
        _printf("");
 
 .SH "SEE ALSO"
