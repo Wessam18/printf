@@ -1,4 +1,4 @@
-.TH _printf    "1.0"  "_printf man page"  "20 September 2023" 
+.TH _printf    "1.0"  "_printf man page"  "20 September 2023"
 
 .SH NAME
        _printf \- for working as a printf command in C
@@ -22,7 +22,7 @@
        X: used to handle capital hexadecimal numbers.
        r: used to print a reverse string.
        R: used to print a string using Rot13.
-       
+
 .SH EXAMPELES
 
 .SH "SEE ALSO"
