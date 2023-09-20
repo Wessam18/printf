@@ -26,6 +26,11 @@ int unsign_recur(unsigned int x)
 {
 	int len = 0;
 
+	if (x == 0)
+	{
+		return (1);
+	}
+
 	if (x / 10 == 0)
 	{
 		len += _putchar((x % 10) + '0');
