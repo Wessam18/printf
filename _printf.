@@ -1,0 +1,38 @@
+.TH _printf    "1.0"  "_printf man page"  "20 September 2023" 
+
+.SH NAME
+       _printf \- for working as a printf command in C
+
+.SH SYNOPSIS
+       _printf [options] [arguments]
+
+.SH DESCRIPTION
+       _printf is function used as main printf function in C. it used to handel
+       inputs as strings, chars, percent, decimal numbers and other data types.
+.SH OPTIONS
+       c: used to handle characters.
+       s: used to handle strings.
+       %: used to handle percent
+       d: used to handle Decimal Numbers.
+       i: another options for handling decimal numbers.
+       b: used to handle binary numbers.
+       u: used to handel unsigned numbers.
+       o: used to handle octal numbers.
+       x: used to handle small hexadecimal numbers.
+       X: used to handle capital hexadecimal numbers.
+       r: used to print a reverse string.
+       R: used to print a string using Rot13.
+       
+.SH EXAMPELES
+
+.SH "SEE ALSO"
+       printf(1)
+
+.SH AUTHOR
+       Wessam Abdelnabi     <Wessamabdelnabi903@gmail.com>
+       Azzaz Akl            <azzazibrahimakl@outlook.com>
+
+.\" <Wessamabdelnabi903@gmail.com> <azzazibrahimakl@outlook.com>
+
+COPYRIGHT
+       This is PROJECT created by us after 5 days of doing our best.
