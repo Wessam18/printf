@@ -1,4 +1,4 @@
-.TH _printf    "1.0"  "_printf man page"  "20 September 2023" 
+.TH _printf    "1.0"  "_printf man page"  "20 September 2023"
 
 .SH NAME
        _printf \- for working as a printf command in C

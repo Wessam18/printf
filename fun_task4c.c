@@ -7,30 +7,38 @@
  */
 int punsign(va_list varg)
 {
-	unsigned int number = va_arg(varg, int), len = 0;
+	unsigned int number = va_arg(varg, int);
 
 	if (number == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
-	len += int_recur(number);
-	return (len);
+
+	return (int_recur(number));
 }
 /**
  * unsign_recur - calculating the length of each value.
- * @value: Input number.
+ * @x: Input number.
  * Return: (Length of number).
  */
-int unsign_recur(unsigned int value)
+int unsign_recur(unsigned int x)
 {
-	int len;
+	int len = 0;
 
-	if (value == 0)
+	if (x == 0)
 	{
 		return (0);
 	}
-	len = (1 + unsign_recur(value / 10));
-	_putchar((value % 10) + '0');
+
+	if (x / 10 == 0)
+	{
+		len += _putchar((x % 10) + '0');
+	}
+	else
+	{
+		len += unsign_recur(x / 10);
+		len += _putchar((x % 10) + '0');
+	}
 	return (len);
 }
