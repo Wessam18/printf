@@ -35,7 +35,7 @@ fun_task4a.c: hold function that handling o
 fun_task4b.c:hold function that handling x
 fun_task4c.c:hold function that handling u
 fun_task4d.c:hold function that handling X
-main.h: 
+main.h: hold prototyped of functions.
 README.md:
 
 Author
