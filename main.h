@@ -34,15 +34,13 @@ int bin_recur(unsigned int value);
 int poct(va_list varg);
 int oct_recur(unsigned int value);
 int phexs(va_list varg);
-int hexs_recur(unsigned long int value);
 int phexc(va_list varg);
-int hexc_recur(unsigned long int value);
 int punsign(va_list varg);
 int unsign_recur(unsigned int value);
 int prev(va_list varg);
 int prot13(va_list varg);
 void rot13_recur(char *str, char *result);
-int intohex(unsigned long int x);
-int intoHEX(unsigned long int x);
+int hexs_recur(unsigned long int x);
+int hexc_recur(unsigned long int x);
 
 #endif /*MAIN_H*/
