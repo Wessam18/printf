@@ -7,6 +7,7 @@
 #include <stdarg.h>
 #include <string.h>
 #include <limits.h>
+#include <ctype.h>
 
 /***********Struct_Declarations**********/
 /**
@@ -40,8 +41,6 @@ int punsign(va_list varg);
 int unsign_recur(unsigned int value);
 int prev(va_list varg);
 int prot13(va_list varg);
-void rot13_recur(char *str, char *result);
 int hexc_recurs(unsigned long int value);
-
 
 #endif /*MAIN_H*/
