@@ -183,12 +183,12 @@ int main(void)
     len = printf("%o", UINT_MAX);
     printf("%d\n", len);
 
-   len = _printf("%x", 0);
+   len = _printf("hexam:%x\n", 7586544);
     printf("%d\n", len);
-    len = printf("%x", 0);
+    len = printf("hexao:%x\n", 7586544);
     printf("%d\n", len);
 
-    len = _printf("%X", 0);
+    len = _printf("%x", 0);
     printf("%d\n", len);
     len = printf("%X", 0);
     printf("%d\n", len);

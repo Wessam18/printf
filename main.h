@@ -41,7 +41,7 @@ int unsign_recur(unsigned int value);
 int prev(va_list varg);
 int prot13(va_list varg);
 void rot13_recur(char *str, char *result);
-int hexc_recurs(unsigned long int value);
-
+int intohex(unsigned long int x);
+int intoHEX(unsigned long int x);
 
 #endif /*MAIN_H*/
