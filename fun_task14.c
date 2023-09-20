@@ -12,7 +12,7 @@ int prot13(va_list varg)
 	int len = 0;
 	char c;
 
-	while(*str)
+	while (*str)
 	{
 		if (isalpha(*str))
 		{
